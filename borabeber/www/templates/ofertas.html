@@ -5,11 +5,20 @@
                 <img src="img/cdB8FhHJRlCCyzVVGXCb_bebida.jpg" width="100%" height="10%">
             </div>
         </a>
-        <ion-list>
-            <ion-item class="item-thumbnail-left" ui-sref="comerciante">
+
+        <ion-list >
+            <ion-item ng-repeat="item in listaPromocoes" class="item-thumbnail-left" ui-sref="comerciante">
                 <img src="img/WQZla5wFRn6pmJwtzqlN_cerveja.jpg">
-                <h2>Bar do Bigode</h2>
-                <p>asdfjkasdfjsahjfhasjfsjahfjsa fkjsah jfkaskjfaskjfh kjsahfjkashfjksaf</p>
+                <h2>{{item.estabelecimento}}</h2>
+                <p> {{item.oferta}}</p>
+
+              <ion-option-button class="button-positive">
+                <i class="icon ion-plus-round"></i>
+              </ion-option-button>
+              <ion-option-button class="button-assertive">
+                <i class="icon ion-android-share-alt"></i>
+              </ion-option-button>
+
             </ion-item>
         </ion-list>
     </ion-content>

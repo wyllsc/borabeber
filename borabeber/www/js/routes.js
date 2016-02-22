@@ -1,65 +1,41 @@
-angular.module('app.routes', [])
+angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvider) {
 
-.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
 
-  
-      
     .state('menu', {
       url: '/menu',
       abstract:true,
       templateUrl: 'templates/menu.html'
     })
-      
-    
-      
-        
+
     .state('menu.ofertas', {
       url: '/ofertas',
       views: {
-        'side-menu23': {
+        'menu-usuario': {
           templateUrl: 'templates/ofertas.html'
         }
       }
     })
-        
-      
-    
-      
-        
-    .state('comerciante', {
+
+    .state('menu.comerciante', {
       url: '/comerciante',
-      templateUrl: 'templates/comerciante.html'
+      views: {
+        'menu-usuario': {
+          templateUrl: 'templates/comerciante.html'
+        }
+      }
     })
-        
-      
-    
-      
-        
+
     .state('menu.mapa', {
       url: '/mapa',
       views: {
-        'side-menu23': {
+        'menu-usuario': {
           templateUrl: 'templates/mapa.html'
         }
       }
     })
-        
-      
     ;
 
-  // if none of the above states are matched, use this as the fallback
-  
   $urlRouterProvider.otherwise('/menu/ofertas');
-  
-
-  
 
 });
