@@ -1,13 +1,28 @@
 angular.module('app.controllers', [])
 
-.controller('OfertasCtrl', function($scope, OfertaFactory) {
-  $scope.listaPromocoes = OfertaFactory.listaOfertas();
-})
+  .controller('OfertasCtrl', function ($scope, OfertaFactory, $ionicSlideBoxDelegate, $cordovaSocialSharing) {
 
-.controller('ComercianteCtrl', function($scope) {
+    //Slide Banner
+    $scope.navSlide = function (index) {
+      $ionicSlideBoxDelegate.slide(index, 500);
+    };
 
-})
+    // Busca Ofertas
+    $scope.listaPromocoes = OfertaFactory.listaOfertas();
 
-.controller('MapaCtrl', function($scope) {
+    // Compartilhar
+    $scope.compartilhar = function () {
+      $cordovaSocialSharing.share("App para buscar sua bebida mais próxima e mais barata!", "Bora Beber?", "http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-vamo-ou-bora-beber-2.png", "http://www.borabeber.com");
+      console.log("chamando o compartilhar");
+    }
 
-})
+
+  })
+
+  .controller('ComercianteCtrl', function ($scope) {
+
+  })
+
+  .controller('MapaCtrl', function ($scope) {
+
+  })

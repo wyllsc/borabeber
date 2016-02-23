@@ -1,23 +1,26 @@
 <ion-view title="Ofertas">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <a style="display:inline-block;" href="tel:">
-            <div style="text-align:center;">
-                <img src="img/cdB8FhHJRlCCyzVVGXCb_bebida.jpg" width="100%" height="10%">
-            </div>
-        </a>
+        <div>
+          <ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true">
+            <ion-slide>
+              <img style="width: 100%; height: 100%" src="http://media.aguadoce.com.br/uploads/clube_cerveja/2011/banner2.jpg">
+            </ion-slide>
+            <ion-slide>
+              <img style="width: 100%; height: 100%" src="http://media.aguadoce.com.br/uploads/clube_cerveja/2011/banner1.jpg">
+            </ion-slide>
+          </ion-slide-box>
+        </div>
+
+        <button class="button icon-google-wallet"></button>
 
         <ion-list >
             <ion-item ng-repeat="item in listaPromocoes" class="item-thumbnail-left" ui-sref="comerciante">
-                <img src="img/WQZla5wFRn6pmJwtzqlN_cerveja.jpg">
+                <img src="{{item.imagem}}">
                 <h2>{{item.estabelecimento}}</h2>
                 <p> {{item.oferta}}</p>
 
-              <ion-option-button class="button-positive">
-                <i class="icon ion-plus-round"></i>
-              </ion-option-button>
-              <ion-option-button class="button-assertive">
-                <i class="icon ion-android-share-alt"></i>
-              </ion-option-button>
+              <ion-option-button class="button-positive"><i class="icon ion-plus-round"></i></ion-option-button>
+              <ion-option-button class="button-assertive"><i class="icon ion-android-share-alt" ng-click="compartilhar()"></i></ion-option-button>
 
             </ion-item>
         </ion-list>
