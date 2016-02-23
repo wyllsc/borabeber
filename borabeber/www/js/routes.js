@@ -12,7 +12,8 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
       url: '/ofertas',
       views: {
         'menu-usuario': {
-          templateUrl: 'templates/ofertas.html'
+          templateUrl: 'templates/ofertas.html',
+          controller: 'OfertasCtrl'
         }
       }
     })

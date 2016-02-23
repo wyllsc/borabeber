@@ -1,8 +1,7 @@
 angular.module('app.controllers', [])
 
-.controller('ofertasCtrl', function($scope, ServicoOferta) {
-
-  $scope.listaPromocoes = ServicoOferta.listaOfertas();
+.controller('OfertasCtrl', function($scope, OfertaFactory) {
+  $scope.listaPromocoes = OfertaFactory.listaOfertas();
 })
 
 .controller('comercianteCtrl', function($scope) {
