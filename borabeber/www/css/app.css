@@ -18,3 +18,8 @@ font-style: normal;
   font-family: "fontawesome";
   content: "\f1ee";
 }
+
+.icon-google-wallet:before {
+  font-family: "fontawesome";
+  content: "\f1ee";
+}

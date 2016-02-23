@@ -9,7 +9,7 @@ angular.module('app.services', [])
   .factory('OfertaFactory', function () {
 
     var ofertas = [{
-      estabelecimento: 'Thi Singleton',
+      estabelecimento: 'Bar do Araujo',
       imagem: 'img/tipo-cerveja/bud-bottles.gif',
       oferta: 'Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.'
     }, {
