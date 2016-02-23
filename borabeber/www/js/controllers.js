@@ -4,10 +4,10 @@ angular.module('app.controllers', [])
   $scope.listaPromocoes = OfertaFactory.listaOfertas();
 })
 
-.controller('comercianteCtrl', function($scope) {
+.controller('ComercianteCtrl', function($scope) {
 
 })
 
-.controller('mapaCtrl', function($scope) {
+.controller('MapaCtrl', function($scope) {
 
 })
