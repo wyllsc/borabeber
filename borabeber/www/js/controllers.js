@@ -25,4 +25,12 @@ angular.module('app.controllers', [])
 
   .controller('MapaCtrl', function ($scope) {
 
+    angular.extend($scope, {
+      brasilia: {
+        lat: -15.814216,
+        lng: -48.093091,
+        zoom: 4
+      }
+    });
+
   })
