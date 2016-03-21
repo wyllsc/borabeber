@@ -12,8 +12,6 @@
     <link href="css/app.css" rel="stylesheet">
 
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-    <script src="lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
-    <script src="lib/leaflet/dist/leaflet.js"></script>
     <script src="cordova.js"></script>
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -25,16 +23,18 @@
     <script src="js/routes.js"></script>
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDNeWvxAWE_7wm1sXWGmoLDo9yvNDNK4fw"></script>
 
   </head>
   <body ng-app="app" animation="slide-left-right-ios7">
-    <div>
+  <div>
       <div>
-          <ion-nav-bar class="bar-energized">
-              <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Voltar</ion-nav-back-button>
+        <ion-nav-bar class="bar-energized">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Voltar</ion-nav-back-button>
           </ion-nav-bar>
-          <ion-nav-view></ion-nav-view>
+        <ion-nav-view></ion-nav-view>
       </div>
     </div>
+
   </body>
 </html>

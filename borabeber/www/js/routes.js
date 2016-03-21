@@ -31,7 +31,8 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
       url: '/mapa',
       views: {
         'menu-usuario': {
-          templateUrl: 'templates/mapa.html'
+          templateUrl: 'templates/mapa.html',
+          controller: 'MapaCtrl'
         }
       }
     })
